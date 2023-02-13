@@ -29,6 +29,7 @@ public class UserController {
     @GetMapping("/getUserDetails/{userId}")
     public ResponseEntity<User> getUserDetails(@PathVariable("userId") String userId){
         User user=userService.getUserDetails(userId);
+        System.out.println("Hello~");
         return new ResponseEntity<>(user,HttpStatus.OK);
     }
 
