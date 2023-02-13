@@ -21,6 +21,7 @@ public class UserController {
     @PostMapping("/addUserDetails")
     public ResponseEntity<User> addUserDetails(@RequestBody UserDTO userDTO){
         User user=userService.addUserDetails(userDTO);
+        System.out.println("Hello~");
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
